@@ -1,0 +1,28 @@
+# Project SpectraVision: Data Dictionary
+# Region: Mumbai, Maharashtra, India
+# Source: Sentinel-2 L2A (Bottom-of-Atmosphere Reflectance)
+
+This directory contains the multispectral bands required for the Geospatial 
+Computer Vision pipeline. The dataset covers the full spectral range (B01-B12), 
+enabling advanced atmospheric correction and vegetation analysis.
+
+## Band Specifications & Resolutions:
+- B01 | 60m | Coastal Aerosol (Atmospheric Filtering)
+- B02 | 10m | Blue (True Color / ARVI)
+- B03 | 10m | Green (True Color / NDWI / MNDWI)
+- B04 | 10m | Red (True Color / NDVI / SAVI / ARVI)
+- B05 | 20m | Red Edge 1 (Vegetation Health)
+- B06 | 20m | Red Edge 2 (Vegetation Health)
+- B07 | 20m | Red Edge 3 (Vegetation Health)
+- B08 | 10m | NIR Broad (NDVI / NDWI / SAVI / ARVI)
+- B8A | 20m | NIR Narrow (Advanced NDVI)
+- B09 | 60m | Water Vapor
+- B10 | 60m | Cirrus (Cloud Masking)
+- B11 | 20m | SWIR 1 (MNDWI / NDBI)
+- B12 | 20m | SWIR 2 (Geology / Urban Analysis)
+
+## Technical Notes:
+- All bands are stored in .tiff format.
+- 20m and 60m bands require spatial resampling (upscaling) to 10m 
+  before performing pixel-wise arithmetic with B02/B03/B04/B08.
+- Values represent Bottom-of-Atmosphere (BOA) reflectance.
