@@ -2,7 +2,7 @@
 # Region: Mumbai, Maharashtra, India
 # Source: Sentinel-2 L2A (Bottom-of-Atmosphere Reflectance)
 
-This directory contains the multispectral bands required for the Geospatial 
+This file contains the multispectral bands required for the Geospatial 
 Computer Vision pipeline. The dataset covers the full spectral range (B01-B12), 
 enabling advanced atmospheric correction and vegetation analysis.
 
@@ -26,3 +26,7 @@ enabling advanced atmospheric correction and vegetation analysis.
 - 20m and 60m bands require spatial resampling (upscaling) to 10m 
   before performing pixel-wise arithmetic with B02/B03/B04/B08.
 - Values represent Bottom-of-Atmosphere (BOA) reflectance.
+
+📂 Dataset: Due to the high resolution of multispectral Sentinel-2 bands, the raw test data is hosted on Google Drive.
+Download Test Data Here : https://drive.google.com/drive/folders/1HEV0ImUjsp8b3ABaTUuJ_Hvwm7mhxlVj?usp=sharing
+Alternatively, the notebook includes a script to auto-download the required bands.
